@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SubTrack Cloud — Settings</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/assets/translations.js" defer></script>
+    <script type="module" src="/js/settings.js" defer></script>
+  </head>
+  <body class="light-theme">
+    <header class="app-header">
+      <div class="container app-nav">
+        <div class="logo">SubTrack Cloud</div>
+        <nav>
+          <a href="/dashboard.html" data-i18n="dashboard.title"></a>
+          <button class="btn ghost" id="logout-btn" data-i18n="auth.logout"></button>
+        </nav>
+      </div>
+    </header>
+    <main class="settings-main container">
+      <section class="panel">
+        <h1 data-i18n="settings.title"></h1>
+        <div class="settings-block">
+          <h2 data-i18n="settings.accountTitle"></h2>
+          <div class="setting-row">
+            <span data-i18n="settings.email"></span>
+            <strong id="account-email">—</strong>
+          </div>
+          <div class="setting-row">
+            <label for="language-select" data-i18n="settings.language"></label>
+            <select id="language-select">
+              <option value="ru">Русский</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <label for="currency-select" data-i18n="settings.displayCurrency"></label>
+            <select id="currency-select">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="RUB">RUB</option>
+            </select>
+          </div>
+          <label class="form-checkbox">
+            <input type="checkbox" id="email-confirmed" />
+            <span data-i18n="settings.emailConfirmedLabel"></span>
+          </label>
+          <p class="muted" data-i18n="settings.emailConfirmation"></p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="settings.dataTitle"></h2>
+        <div class="settings-actions">
+          <button class="btn secondary" id="export-btn" data-i18n="settings.export"></button>
+          <button class="btn ghost" id="clear-local" data-i18n="settings.clearLocal"></button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="settings.infoTitle"></h2>
+        <p data-i18n="settings.infoText"></p>
+      </section>
+    </main>
+  </body>
+</html>

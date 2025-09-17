@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SubTrack Cloud — Login</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/assets/translations.js" defer></script>
+    <script type="module" src="/js/login.js" defer></script>
+  </head>
+  <body class="light-theme auth-page">
+    <main class="auth-container">
+      <section class="auth-card">
+        <div class="auth-header">
+          <h1 data-i18n="auth.title"></h1>
+          <p data-i18n="auth.subtitle"></p>
+        </div>
+        <div class="auth-tabs">
+          <button class="tab active" data-mode="login" data-i18n="auth.loginTab"></button>
+          <button class="tab" data-mode="register" data-i18n="auth.registerTab"></button>
+        </div>
+        <form id="auth-form" class="auth-form" autocomplete="off">
+          <div class="form-group">
+            <label for="email" data-i18n="auth.email"></label>
+            <input type="email" id="email" name="email" required data-i18n="auth.email" data-i18n-attr="placeholder" />
+          </div>
+          <div class="form-group">
+            <label for="password" data-i18n="auth.password"></label>
+            <input type="password" id="password" name="password" required data-i18n="auth.password" data-i18n-attr="placeholder" />
+          </div>
+          <div id="register-only" class="form-footnote" data-i18n="auth.confirmEmailHint"></div>
+          <button type="submit" class="btn primary" id="submit-btn" data-i18n="auth.submitLogin"></button>
+          <p class="switch-hint">
+            <a href="#" id="switch-link" data-i18n="auth.switchToRegister"></a>
+          </p>
+        </form>
+        <div id="auth-message" class="auth-message" role="alert" hidden></div>
+        <div class="language-switcher-inline">
+          <button type="button" data-language="ru">RU</button>
+          <button type="button" data-language="en">EN</button>
+        </div>
+        <a class="link-back" href="/" data-i18n="landing.navFeatures"></a>
+      </section>
+    </main>
+  </body>
+</html>
