@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SubTrack Cloud — Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/assets/translations.js" defer></script>
+    <script type="module" src="/js/dashboard.js" defer></script>
+  </head>
+  <body class="light-theme">
+    <header class="app-header">
+      <div class="container app-nav">
+        <div class="logo">SubTrack Cloud</div>
+        <nav>
+          <a href="/settings.html" data-i18n="settings.title"></a>
+          <button class="btn ghost" id="logout-btn" data-i18n="auth.logout"></button>
+        </nav>
+      </div>
+    </header>
+    <main class="app-main container">
+      <section class="panel analytics" aria-live="polite">
+        <h1 data-i18n="dashboard.title"></h1>
+        <div class="metrics" id="metrics">
+          <div class="metric">
+            <span data-i18n="dashboard.analytics.monthlyTotal"></span>
+            <strong id="metric-monthly">—</strong>
+          </div>
+          <div class="metric">
+            <span data-i18n="dashboard.analytics.yearlyTotal"></span>
+            <strong id="metric-yearly">—</strong>
+          </div>
+          <div class="metric">
+            <span data-i18n="dashboard.analytics.activeCount"></span>
+            <strong id="metric-active">0</strong>
+          </div>
+          <div class="metric">
+            <span data-i18n="dashboard.analytics.payments30"></span>
+            <strong id="metric-payments">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel subscriptions">
+        <div class="panel-header">
+          <h2 data-i18n="dashboard.title"></h2>
+          <button class="btn primary" id="add-subscription" data-i18n="dashboard.add"></button>
+        </div>
+        <div id="subscriptions-container" class="subscription-list"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <h3 data-i18n="dashboard.empty.title"></h3>
+          <p data-i18n="dashboard.empty.description"></p>
+          <button class="btn primary" id="empty-add" data-i18n="dashboard.add"></button>
+        </div>
+      </section>
+
+      <section class="panel upcoming">
+        <h2 data-i18n="dashboard.analytics.upcomingTitle"></h2>
+        <div id="upcoming-list" class="upcoming-board"></div>
+        <p id="upcoming-empty" class="muted" data-i18n="dashboard.analytics.upcomingEmpty"></p>
+      </section>
+    </main>
+    <div id="modal-root"></div>
+  </body>
+</html>
