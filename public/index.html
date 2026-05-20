@@ -33,12 +33,75 @@
 
     <main>
       <section class="hero" id="hero">
-        <div class="container hero-content">
-          <h1 data-i18n="landing.heroTitle"></h1>
-          <p class="lead" data-i18n="landing.heroSubtitle"></p>
-          <div class="actions">
-            <button class="btn primary" id="hero-primary" data-i18n="landing.heroPrimary"></button>
-            <button class="btn ghost" id="hero-secondary" data-i18n="landing.heroSecondary"></button>
+        <div class="container hero-layout">
+          <div class="hero-text">
+            <div class="hero-badge">
+              <span class="pulse"></span>
+              <span data-i18n="landing.heroBadge"></span>
+            </div>
+            <h1 data-i18n="landing.heroTitle"></h1>
+            <p class="lead" data-i18n="landing.heroSubtitle"></p>
+            <div class="hero-meta">
+              <div class="meta-card">
+                <strong>98%</strong>
+                <span data-i18n="landing.heroMetaRetention"></span>
+              </div>
+              <div class="meta-card">
+                <strong>5</strong>
+                <span data-i18n="landing.heroMetaMinutes"></span>
+              </div>
+              <div class="meta-card">
+                <strong>24/7</strong>
+                <span data-i18n="landing.heroMetaSync"></span>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="btn primary" id="hero-primary" data-i18n="landing.heroPrimary"></button>
+              <button class="btn ghost" id="hero-secondary" data-i18n="landing.heroSecondary"></button>
+            </div>
+            <p class="hero-footnote" data-i18n="landing.heroFootnote"></p>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-visual-pill">
+              <span class="pulse"></span>
+              <span data-i18n="landing.heroVisualTitle"></span>
+            </div>
+            <div class="hero-visual-summary">
+              <div class="summary-card">
+                <span data-i18n="landing.heroVisualMonthly"></span>
+                <strong>$482</strong>
+              </div>
+              <div class="summary-card accent">
+                <span data-i18n="landing.heroVisualSaved"></span>
+                <strong>+18%</strong>
+              </div>
+            </div>
+            <div class="hero-visual-list">
+              <article class="hero-visual-item">
+                <div class="item-main">
+                  <span class="hero-visual-name">Netflix</span>
+                  <span class="badge" data-i18n="categories.entertainment"></span>
+                </div>
+                <span class="hero-visual-date" data-i18n="landing.heroVisualTomorrow"></span>
+                <span class="hero-visual-amount">$15.99</span>
+              </article>
+              <article class="hero-visual-item">
+                <div class="item-main">
+                  <span class="hero-visual-name">Spotify</span>
+                  <span class="badge" data-i18n="categories.entertainment"></span>
+                </div>
+                <span class="hero-visual-date" data-i18n="landing.heroVisualInTwo"></span>
+                <span class="hero-visual-amount">$9.99</span>
+              </article>
+              <article class="hero-visual-item">
+                <div class="item-main">
+                  <span class="hero-visual-name">Adobe CC</span>
+                  <span class="badge" data-i18n="categories.software"></span>
+                </div>
+                <span class="hero-visual-date" data-i18n="landing.heroVisualNextWeek"></span>
+                <span class="hero-visual-amount">$54.99</span>
+              </article>
+            </div>
           </div>
         </div>
       </section>
